@@ -4,10 +4,8 @@ core: 8.x
 type: module
 package: General Data Protection Regulation
 
-php: '7.1'
-
 dependencies:
-  - drupal:system (>=8.5.0)
+  - drupal:system
   - gdpr:gdpr
   - gdpr:anonymizer
   - gdpr:gdpr_fields

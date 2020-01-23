@@ -11,7 +11,6 @@ cache:
 language: php
 
 php:
-  - 7.1
   - 7.2
   - 7.3
 
@@ -27,21 +26,23 @@ env:
 
   matrix:
     # Latest stable release
-    - DRUPAL_CORE="~8.5"
+    - DRUPAL_CORE="~8.8"
     # Latest current dev branch
-    - DRUPAL_CORE="8.5.x-dev@dev"
+    - DRUPAL_CORE="^8.8"
     # Latest future dev branch
-    - DRUPAL_CORE="8.6.x-dev@dev"
+    - DRUPAL_CORE="^8"
 
 matrix:
   fast_finish: true
   allow_failures:
-    - php: 7.1
-      env: DRUPAL_CORE="8.6.x-dev@dev"
     - php: 7.2
-      env: DRUPAL_CORE="8.6.x-dev@dev"
+      env: DRUPAL_CORE="^8"
     - php: 7.3
-      env: DRUPAL_CORE="8.6.x-dev@dev"
+      env: DRUPAL_CORE="^8"
+    - php: 7.3
+      env: DRUPAL_CORE="^8.8"
+    - php: 7.3
+      env: DRUPAL_CORE="~8.8"
 
 mysql:
   database: drupal_travis_db
